@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<style>
+#wrap{
+    width: 700px;
+    padding: 10px;
+    border: 2px solid navy;
+    margin: 25px;
+    float:center;
+}
+h2 {
+    text-align: center;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52));
+	background:-moz-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-webkit-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-o-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-ms-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52',GradientType=0);
+	background-color:#b8e356;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:7px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #86ae47;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356));
+	background:-moz-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-webkit-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-o-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-ms-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356',GradientType=0);
+	background-color:#a5cc52;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.submit {
+	-moz-box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44c767), color-stop(1, #5cbf2a));
+	background:-moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
+	background-color:#44c767;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:11px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.submit:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+	background:-moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
+	background-color:#5cbf2a;
+}
+.submit:active {
+	position:relative;
+	top:1px;
+}
+.reset {
+	-moz-box-shadow:inset 0px 1px 0px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #91b8b3;
+	box-shadow:inset 0px 1px 0px 0px #91b8b3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
+	background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
+	background-color:#768d87;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:11px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2b665e;
+}
+.reset:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
+	background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
+	background-color:#6c7c7c;
+}
+.reset:active {
+	position:relative;
+	top:1px;
+}
+</style>
+
+<div id=wrap>
+<h2>Sea Side Burgers, Fries and Shakes</h2>
+<fieldset>
+<legend>Burgers</legend>
+<form id="burgers">
+    <input type="radio" name=burger id="noburgers" value="0">
+    No Hamburger($0.00)<br>
+     <input type="radio" name=burger  id="ham" value="2.99">         
+    Hamburger($2.99)<br>
+     <input type="radio" name=burger id="cheese" value="3.49">        
+    Cheese Burger($3.49)<br>
+     <input type="radio" name=burger id="hambacon" value="3.99">   
+    Hamburger with Bacon($3.99)<br>
+     <input type="radio" name=burger id="cheesebacon"value="4.49">
+    Cheeseburger with Bacon($4.49)
+</form>
+</fieldset><br><br>
+<fieldset>
+<legend>Fries</legend>
+<form id="fries">
+    <input type="radio" name=fries id="nofries" value="0">
+    No Fries($0.00)<br>
+     <input type="radio" name=fries id="small" value="0.99">        
+    Small Fries($0.99)<br>
+     <input type="radio" name=fries id="medium"  value="1.49">   
+    Medium Fries($1.49)<br>
+     <input type="radio" name=fries id="large" value="1.99"   >
+    Large Fries($1.99)<br>
+</form>
+</fieldset><br><br>
+<fieldset>
+<legend>Drinks</legend>
+<form id="drinks">
+    <input type="radio" name=drink id="nodrinks"  value="0">
+    No Soda($0.00)<br>
+     <input type="radio" name=drink id="soda" value="1.75">    
+    Soda($1.75)<br>
+     <input type="radio" name=drink id="milkshake" value="2.99">
+    Milk Shake($2.99)<br>
+     <input type="radio"name=drink id="water"  value="0.99">       
+    Water($0.99)<br>
+</form>
+</fieldset><br>
+<button id="checkout" class="myButton">Checkout</button><br><br>
+
+<div id=payment>
+ <fieldset>
+  <legend>Payment Information</legend>
+   <form>
+   <img src="ass2.png"><br>
+   Credit Card  <input type="text" name="cc" id="cc"  maxlength="16">
+   Expiry <select id="month">
+  <option value="jan">January</option>
+  <option value="feb">February</option>
+  <option value="mar">March</option>
+  <option value="apr">April</option>
+  <option value="may">May</option>
+  <option value="june">June</option>
+  <option value="july">July</option>
+  <option value="aug">August</option>
+  <option value="sep">September</option>
+  <option value="oct">October</option>
+  <option value="nov">November</option>
+  <option value="dec">December</option>
+</select>
+   / <select id="year">
+  <option value="2016">2016</option>
+  <option value="2017">2017</option>
+  <option value="2018">2018</option>
+  <option value="2019">2019</option>
+  <option value="2020">2020</option>
+</select><br><br>
+   CVV <input type="text" name="cvv" id="cvv" maxlength="3" size="4"><br><br>
+ 
+   <div id="total"></div><br>
+   <input type="button" class="submit" id="submit" value="Submit Payment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="reset" value="Reset">
+   <p id="result"></p>
+   </form>
+  </fieldset>
+ </div>
+</div>
+  <script src="ass2.js"></script>
+  <script src="paymentvalidation.js"></script>   <!-- if you are using two scripts, you must call the second one -->
+</body>
+</html>
+ 
+
+
